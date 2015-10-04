@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ContainerViewController.h"
 
-@interface MenuViewController : UIViewController
+@interface MenuViewController : UIViewController {
+    ContainerViewController *cvc;
+    UIButton *selected;
+}
 
-+(CGFloat)buttonSize;
++ (CGFloat)buttonSize;
+- (id)initWithContainerView:(ContainerViewController *)theCVC;
 
 @end

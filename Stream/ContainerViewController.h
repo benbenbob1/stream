@@ -7,12 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MenuViewController.h"
-#import "ViewController.h"
+@class MenuViewController;
+@class ViewController;
 
 @interface ContainerViewController : UIViewController {
     IBOutlet ViewController *vc;
     MenuViewController *mvc;
 }
+
+- (void)streamButtonPressed;
+- (void)friendsButtonPressed;
+- (void)communityButtonPressed;
+- (void)settingsButtonPressed;
 
 @end

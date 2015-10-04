@@ -29,20 +29,23 @@
 
 @implementation DeviceTableViewCell
 
-- (void)showAddStream:(BOOL)yesOrNo {
+- (UIView *)showAddStream:(BOOL)yesOrNo {
     if (yesOrNo) {
         if (!imgView) {
             imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 100, self.frame.size.width, 70)];
             imgView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
             imgView.image = [UIImage imageNamed:@"add-stream-button"];
+            [imgView setUserInteractionEnabled:true];
             [imgView setContentMode:UIViewContentModeScaleAspectFit];
             [self addSubview:imgView];
         }
         imgView.hidden = false;
         innerView.hidden = true;
+        return imgView;
     } else {
         if (imgView) imgView.hidden = true;
         innerView.hidden = false;
+        return nil;
     }
 }
 
@@ -113,7 +116,7 @@
     [df setDateStyle:NSDateFormatterShortStyle];
     NSDate *date = [df dateFromString:dateStr];
     [self setCurDate:date];
-    [self setCurGals:[[someWeekData[idx] objectForKey:@"value"] intValue]];
+    [self setCurGals:[[someWeekData[idx] objectForKey:@"value"] doubleValue]];
 }
 
 - (void)selectWeekItem:(UITapGestureRecognizer *)rec {
@@ -131,8 +134,8 @@
     curDateLabel.text = [str uppercaseString];
 }
 
-- (void)setCurGals:(int)curGals {
-    [galView setGalLabelStr:[NSString stringWithFormat:@"%i", curGals]];
+- (void)setCurGals:(double)curGals {
+    [galView setGalLabelStr:[NSString stringWithFormat:@"%.2f", curGals]];
 }
 
 @end
