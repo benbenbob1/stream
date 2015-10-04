@@ -7,12 +7,80 @@
 //
 
 #import "ViewController.h"
+#import <AFNetworking.h>
 
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
+
+- (void)tic {
+    NSString *influx = @"http://104.131.149.93:31689/query";
+    NSDictionary *params = @{
+                             @"db": @"stream",
+                             @"p":@"password",
+                             @"u":@"readonly",
+                             @"q":@"SELECT mean(value) * 100 FROM \"readings\" WHERE time > now() - 60m   GROUP BY time(24h), \"meter\" fill(0)"
+                             };
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager GET:influx parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSArray *valueIOT = [[[responseObject objectForKey:@"results"][0] objectForKey:@"series"][0] objectForKey:@"values"];
+        NSArray *valuePOST = [[[responseObject objectForKey:@"results"][0] objectForKey:@"series"][1] objectForKey:@"values"];
+        NSLog(@"JSON: %@", valueIOT);
+        NSString *today = [NSString stringWithFormat:@"%@", valueIOT[0][1]];
+        NSLog(@"%@", today);
+        devices = [NSMutableArray arrayWithArray:@[
+                                                   @{@"name": @"IOT Meter",
+                                                     @"points": @"21230",
+                                                     @"days":@[
+                                                             @{@"date": @"9/29/15",
+                                                               @"value": @"0"},
+                                                             @{@"date": @"9/30/15",
+                                                               @"value": @"0"},
+                                                             @{@"date": @"10/1/15",
+                                                               @"value": @"0"},
+                                                             @{@"date": @"10/2/15",
+                                                               @"value": @"0"},
+                                                             @{@"date": @"10/3/15",
+                                                               @"value": @"0"},
+                                                             @{@"date": @"10/4/15",
+                                                               @"value": today}
+                                                             ]
+                                                     },
+                                                   @{@"name": @"Downstairs Toilet",
+                                                     @"points": @"923455",
+                                                     @"days": @[
+                                                             @{@"date": @"9/29/15",
+                                                               @"value": @"3"},
+                                                             @{@"date": @"9/30/15",
+                                                               @"value": @"0"},
+                                                             @{@"date": @"10/1/15",
+                                                               @"value": @"4"},
+                                                             @{@"date": @"10/2/15",
+                                                               @"value": @"8"},
+                                                             @{@"date": @"10/3/15",
+                                                               @"value": @"10"},
+                                                             @{@"date": @"10/4/15",
+                                                               @"value": @"4"}
+                                                             ]
+                                                     }
+                                                   ]];
+        
+        [devicesView reloadData];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
+    
+
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self tic];
+    [NSTimer scheduledTimerWithTimeInterval:5.0f
+                                     target:self selector:@selector(tic) userInfo:nil repeats:YES];
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     DeviceTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DeviceCell"];
