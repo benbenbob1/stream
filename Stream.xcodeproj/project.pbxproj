@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B50D25011BC18D0800284886 /* FriendTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B50D25001BC18D0800284886 /* FriendTableCell.m */; };
+		B50D25031BC18FC900284886 /* arrow-right.png in Resources */ = {isa = PBXBuildFile; fileRef = B50D25021BC18FC900284886 /* arrow-right.png */; };
+		B50D25061BC190C700284886 /* FriendsPage.m in Sources */ = {isa = PBXBuildFile; fileRef = B50D25051BC190C700284886 /* FriendsPage.m */; };
+		B547B0B81BC1843C00109012 /* friends-alt.png in Resources */ = {isa = PBXBuildFile; fileRef = B547B0B71BC1843C00109012 /* friends-alt.png */; };
 		B57DB4831BC072E500DB950A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B57DB4821BC072E500DB950A /* main.m */; };
 		B57DB4861BC072E500DB950A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B57DB4851BC072E500DB950A /* AppDelegate.m */; };
 		B57DB4891BC072E500DB950A /* Stream.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B57DB4871BC072E500DB950A /* Stream.xcdatamodeld */; };
@@ -33,7 +37,6 @@
 		B5CB12411BC1455600688AF7 /* badges.png in Resources */ = {isa = PBXBuildFile; fileRef = B5CB12371BC1455600688AF7 /* badges.png */; };
 		B5CB12421BC1455600688AF7 /* community-alt.png in Resources */ = {isa = PBXBuildFile; fileRef = B5CB12381BC1455600688AF7 /* community-alt.png */; };
 		B5CB12431BC1455600688AF7 /* community.png in Resources */ = {isa = PBXBuildFile; fileRef = B5CB12391BC1455600688AF7 /* community.png */; };
-		B5CB12441BC1455600688AF7 /* friends-alt.png in Resources */ = {isa = PBXBuildFile; fileRef = B5CB123A1BC1455600688AF7 /* friends-alt.png */; };
 		B5CB12451BC1455600688AF7 /* friends.png in Resources */ = {isa = PBXBuildFile; fileRef = B5CB123B1BC1455600688AF7 /* friends.png */; };
 		B5CB12461BC1455600688AF7 /* settings-alt.png in Resources */ = {isa = PBXBuildFile; fileRef = B5CB123C1BC1455600688AF7 /* settings-alt.png */; };
 		B5CB12471BC1455600688AF7 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = B5CB123D1BC1455600688AF7 /* settings.png */; };
@@ -53,6 +56,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B50D24FF1BC18D0800284886 /* FriendTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendTableCell.h; sourceTree = "<group>"; };
+		B50D25001BC18D0800284886 /* FriendTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendTableCell.m; sourceTree = "<group>"; };
+		B50D25021BC18FC900284886 /* arrow-right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-right.png"; sourceTree = "<group>"; };
+		B50D25041BC190C700284886 /* FriendsPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsPage.h; sourceTree = "<group>"; };
+		B50D25051BC190C700284886 /* FriendsPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsPage.m; sourceTree = "<group>"; };
+		B547B0B71BC1843C00109012 /* friends-alt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "friends-alt.png"; sourceTree = "<group>"; };
 		B57DB47D1BC072E500DB950A /* Stream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B57DB4811BC072E500DB950A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B57DB4821BC072E500DB950A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -91,7 +100,6 @@
 		B5CB12371BC1455600688AF7 /* badges.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = badges.png; sourceTree = "<group>"; };
 		B5CB12381BC1455600688AF7 /* community-alt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "community-alt.png"; sourceTree = "<group>"; };
 		B5CB12391BC1455600688AF7 /* community.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = community.png; sourceTree = "<group>"; };
-		B5CB123A1BC1455600688AF7 /* friends-alt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "friends-alt.png"; sourceTree = "<group>"; };
 		B5CB123B1BC1455600688AF7 /* friends.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = friends.png; sourceTree = "<group>"; };
 		B5CB123C1BC1455600688AF7 /* settings-alt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings-alt.png"; sourceTree = "<group>"; };
 		B5CB123D1BC1455600688AF7 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
@@ -167,6 +175,10 @@
 				B57DB4C61BC0FCE500DB950A /* BarDayItemView.m */,
 				B5CB124A1BC1477600688AF7 /* ContainerViewController.h */,
 				B5CB124B1BC1477600688AF7 /* ContainerViewController.m */,
+				B50D24FF1BC18D0800284886 /* FriendTableCell.h */,
+				B50D25001BC18D0800284886 /* FriendTableCell.m */,
+				B50D25041BC190C700284886 /* FriendsPage.h */,
+				B50D25051BC190C700284886 /* FriendsPage.m */,
 				B57DB48D1BC072E500DB950A /* Main.storyboard */,
 				B57DB4901BC072E500DB950A /* Images.xcassets */,
 				B57DB4921BC072E500DB950A /* LaunchScreen.xib */,
@@ -179,11 +191,12 @@
 		B57DB4801BC072E500DB950A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B50D25021BC18FC900284886 /* arrow-right.png */,
 				B5CB12361BC1455600688AF7 /* badges-alt.png */,
 				B5CB12371BC1455600688AF7 /* badges.png */,
 				B5CB12381BC1455600688AF7 /* community-alt.png */,
 				B5CB12391BC1455600688AF7 /* community.png */,
-				B5CB123A1BC1455600688AF7 /* friends-alt.png */,
+				B547B0B71BC1843C00109012 /* friends-alt.png */,
 				B5CB123B1BC1455600688AF7 /* friends.png */,
 				B5CB123C1BC1455600688AF7 /* settings-alt.png */,
 				B5CB123D1BC1455600688AF7 /* settings.png */,
@@ -303,16 +316,17 @@
 			files = (
 				B57DB4B11BC0757700DB950A /* GothamRnd-Bold.otf in Resources */,
 				B5CB12451BC1455600688AF7 /* friends.png in Resources */,
-				B5CB12441BC1455600688AF7 /* friends-alt.png in Resources */,
 				B57DB4B21BC0757700DB950A /* GothamRnd-Book.otf in Resources */,
 				B57DB4B31BC0757700DB950A /* GothamRnd-Light.otf in Resources */,
 				B57DB4BC1BC0881900DB950A /* add-stream-button.png in Resources */,
 				B57DB4B41BC0757700DB950A /* GothamRnd-Medium.otf in Resources */,
 				B5CB12431BC1455600688AF7 /* community.png in Resources */,
+				B547B0B81BC1843C00109012 /* friends-alt.png in Resources */,
 				B57DB48F1BC072E500DB950A /* Main.storyboard in Resources */,
 				B5CB12481BC1455600688AF7 /* stream-alt.png in Resources */,
 				B5CB12401BC1455600688AF7 /* badges-alt.png in Resources */,
 				B57DB4BE1BC08C4800DB950A /* Linearicons-Free.ttf in Resources */,
+				B50D25031BC18FC900284886 /* arrow-right.png in Resources */,
 				B57DB4941BC072E500DB950A /* LaunchScreen.xib in Resources */,
 				B5CB12411BC1455600688AF7 /* badges.png in Resources */,
 				B5CB12421BC1455600688AF7 /* community-alt.png in Resources */,
@@ -344,6 +358,8 @@
 				B5CB12351BC1445500688AF7 /* MenuViewController.m in Sources */,
 				B57DB4891BC072E500DB950A /* Stream.xcdatamodeld in Sources */,
 				B57DB4861BC072E500DB950A /* AppDelegate.m in Sources */,
+				B50D25061BC190C700284886 /* FriendsPage.m in Sources */,
+				B50D25011BC18D0800284886 /* FriendTableCell.m in Sources */,
 				B5CB124C1BC1477600688AF7 /* ContainerViewController.m in Sources */,
 				B57DB4C41BC0BF2A00DB950A /* DeviceTableViewCell.m in Sources */,
 				B57DB48C1BC072E500DB950A /* ViewController.m in Sources */,
