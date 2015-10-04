@@ -16,7 +16,7 @@
     NSMutableArray *devices;
 }
 
-- (void)addButtonPressed:(UIButton *)sender;
+- (void)addButtonPressed:(id)sender;
 
 
 @end

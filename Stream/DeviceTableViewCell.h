@@ -32,9 +32,9 @@
 - (void)selectDay:(BarDayItemView *)itemView;
 - (void)selectWeekItem:(UITapGestureRecognizer *)rec;
 - (void)setWeekData:(NSArray *)weekData withFrame:(CGRect)rect;
-- (void)showAddStream:(BOOL)yesOrNo;
+- (UIView *)showAddStream:(BOOL)yesOrNo;
 - (void)setCurDate:(NSDate *)date;
 - (void)setDateStr:(NSString *)str;
-- (void)setCurGals:(int)curGals;
+- (void)setCurGals:(double)curGals;
 
 @end

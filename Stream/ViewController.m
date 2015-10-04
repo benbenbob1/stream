@@ -18,7 +18,14 @@
     DeviceTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DeviceCell"];
     
     if (indexPath.row == 1) {
-        [cell showAddStream:true];
+        UIView *addView = [cell showAddStream:true];
+        if (addView) {
+            if (!addView.gestureRecognizers.count) {
+                UITapGestureRecognizer *tGR = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(addButtonPressed:)];
+                NSLog(@"%@, adding %@", addView, tGR);
+                [addView addGestureRecognizer:tGR];
+            }
+        }
     } else {
         NSDateFormatter *df = [NSDateFormatter new];
         [df setDateFormat:@"EEE, MMM d, YYYY"];
@@ -71,14 +78,32 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (section == devices.count - 1) {
+    if (section == devices.count - 1 && section < 3) {
         return 2;
     }
     return 1;
 }
 
-- (void)addButtonPressed:(UIButton *)sender {
-    
+- (void)addButtonPressed:(id)sender {
+    NSLog(@"ABP");
+    [devices addObject:@{@"name": @"Downstairs Toilet",
+                         @"points": @"923455",
+                         @"days": @[
+                                 @{@"date": @"9/29/15",
+                                   @"value": @"3"},
+                                 @{@"date": @"9/30/15",
+                                   @"value": @"0"},
+                                 @{@"date": @"10/1/15",
+                                   @"value": @"4"},
+                                 @{@"date": @"10/2/15",
+                                   @"value": @"8"},
+                                 @{@"date": @"10/3/15",
+                                   @"value": @"10"},
+                                 @{@"date": @"10/4/15",
+                                   @"value": @"4"}
+                                 ]
+                         }];
+    [devicesView reloadData];
 }
 
 - (void)viewDidLoad {
@@ -90,34 +115,17 @@
                                                  @"points": @"21230",
                                                  @"days": @[
                                                          @{@"date": @"9/29/15",
-                                                           @"value": @"39"},
+                                                           @"value": @"39.95"},
                                                          @{@"date": @"9/30/15",
-                                                           @"value": @"25"},
+                                                           @"value": @"25.8"},
                                                          @{@"date": @"10/1/15",
-                                                           @"value": @"36"},
+                                                           @"value": @"36.1"},
                                                          @{@"date": @"10/2/15",
-                                                           @"value": @"25"},
+                                                           @"value": @"25.6"},
                                                          @{@"date": @"10/3/15",
-                                                           @"value": @"24"},
+                                                           @"value": @"24.65"},
                                                          @{@"date": @"10/4/15",
-                                                           @"value": @"8"}
-                                                         ]
-                                                 },
-                                               @{@"name": @"Downstairs Toilet",
-                                                 @"points": @"923455",
-                                                 @"days": @[
-                                                         @{@"date": @"9/29/15",
-                                                           @"value": @"3"},
-                                                         @{@"date": @"9/30/15",
-                                                           @"value": @"0"},
-                                                         @{@"date": @"10/1/15",
-                                                           @"value": @"4"},
-                                                         @{@"date": @"10/2/15",
-                                                           @"value": @"8"},
-                                                         @{@"date": @"10/3/15",
-                                                           @"value": @"10"},
-                                                         @{@"date": @"10/4/15",
-                                                           @"value": @"4"}
+                                                           @"value": @"8.19"}
                                                          ]
                                                  }
                                                ]];

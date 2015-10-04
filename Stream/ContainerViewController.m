@@ -7,6 +7,8 @@
 //
 
 #import "ContainerViewController.h"
+#import "ViewController.h"
+#import "MenuViewController.h"
 
 @implementation ContainerViewController
 
@@ -15,9 +17,24 @@
     
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     vc = [sb instantiateViewControllerWithIdentifier:@"ViewControllerID"];
-    mvc = [[MenuViewController alloc] init];
+    mvc = [[MenuViewController alloc] initWithContainerView:self];
 
     [self.view addSubview:mvc.view];
+    [self.view addSubview:vc.view];
+}
+
+- (void)streamButtonPressed {
+    [vc.view removeFromSuperview];
+    
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    vc = [sb instantiateViewControllerWithIdentifier:@"ViewControllerID"];
+    [self.view addSubview:vc.view];
+}
+
+- (void)friendsButtonPressed {
+    [vc.view removeFromSuperview];
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    vc = [sb instantiateViewControllerWithIdentifier:@"FriendViewID"];
     [self.view addSubview:vc.view];
 }
 
