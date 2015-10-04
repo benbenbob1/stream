@@ -57,20 +57,33 @@
     someWeekData = [NSArray arrayWithArray:weekData];
     CGFloat itemWidth = 40.0f;
     CGFloat margin = (rect.size.width - (itemWidth * (weekData.count + 1))) / (weekData.count + 2);
-    CGFloat height = 190.0;
     CGFloat curX = margin + 25;
     NSDateFormatter *df = [NSDateFormatter new];
+    CGFloat maxHeight = 0.0, minHeight = 100.0;
+    
+    for (NSDictionary *dict in weekData) {
+        int num = [dict[@"value"] intValue];
+        if (num > maxHeight) {
+            maxHeight = num;
+        }
+        if (num < minHeight) {
+            minHeight = num;
+        }
+    }
     
     for (int i=0; i<weekData.count; i++) {
         NSDictionary *dict = weekData[i];
-        BarDayItemView *bDIV = [[BarDayItemView alloc] initWithFrame:CGRectMake(curX, CGRectGetMaxY(rect) - height - 40, itemWidth, height)];
+        int num = [dict[@"value"] intValue];
+        CGFloat height = MIN(190, MAX(80, (num/maxHeight)*190.0));
+        BarDayItemView *bDIV = [[BarDayItemView alloc] initWithFrame:CGRectMake(curX, CGRectGetHeight(rect) - height, itemWidth, height)];
         NSString *origDate = dict[@"date"];
         [df setDateStyle:NSDateFormatterShortStyle];
         NSDate *date = [df dateFromString:origDate];
         [df setDateFormat:@"E"];
         NSString *day = [df stringFromDate:date];
         [bDIV setDay:day];
-        [bDIV setNum:[dict[@"value"] intValue]];
+        
+        [bDIV setNum:num];
         [dayArr addObject:bDIV];
         [self addSubview:bDIV];
         curX += margin + itemWidth;

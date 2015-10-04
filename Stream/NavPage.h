@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MenuViewController.h"
 #import "Config.h"
 
 @interface NavPage : UIViewController {
@@ -15,8 +16,10 @@
     UIButton *menuButton;
     BOOL menuOpen;
     CGFloat menuWidth;
+    MenuViewController *mvc;
 }
 
+- (void)blockingViewPressed:(UIButton *)sender;
 - (void)menuButtonPressed:(UIButton *)sender;
 - (void)panGesture:(UIPanGestureRecognizer *)rec;
 

@@ -28,6 +28,18 @@
 		B57DB4C11BC0AA1F00DB950A /* DeviceInnerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B57DB4C01BC0AA1F00DB950A /* DeviceInnerView.m */; };
 		B57DB4C41BC0BF2A00DB950A /* DeviceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B57DB4C31BC0BF2A00DB950A /* DeviceTableViewCell.m */; };
 		B57DB4C71BC0FCE500DB950A /* BarDayItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = B57DB4C61BC0FCE500DB950A /* BarDayItemView.m */; };
+		B5CB12351BC1445500688AF7 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CB12341BC1445500688AF7 /* MenuViewController.m */; };
+		B5CB12401BC1455600688AF7 /* badges-alt.png in Resources */ = {isa = PBXBuildFile; fileRef = B5CB12361BC1455600688AF7 /* badges-alt.png */; };
+		B5CB12411BC1455600688AF7 /* badges.png in Resources */ = {isa = PBXBuildFile; fileRef = B5CB12371BC1455600688AF7 /* badges.png */; };
+		B5CB12421BC1455600688AF7 /* community-alt.png in Resources */ = {isa = PBXBuildFile; fileRef = B5CB12381BC1455600688AF7 /* community-alt.png */; };
+		B5CB12431BC1455600688AF7 /* community.png in Resources */ = {isa = PBXBuildFile; fileRef = B5CB12391BC1455600688AF7 /* community.png */; };
+		B5CB12441BC1455600688AF7 /* friends-alt.png in Resources */ = {isa = PBXBuildFile; fileRef = B5CB123A1BC1455600688AF7 /* friends-alt.png */; };
+		B5CB12451BC1455600688AF7 /* friends.png in Resources */ = {isa = PBXBuildFile; fileRef = B5CB123B1BC1455600688AF7 /* friends.png */; };
+		B5CB12461BC1455600688AF7 /* settings-alt.png in Resources */ = {isa = PBXBuildFile; fileRef = B5CB123C1BC1455600688AF7 /* settings-alt.png */; };
+		B5CB12471BC1455600688AF7 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = B5CB123D1BC1455600688AF7 /* settings.png */; };
+		B5CB12481BC1455600688AF7 /* stream-alt.png in Resources */ = {isa = PBXBuildFile; fileRef = B5CB123E1BC1455600688AF7 /* stream-alt.png */; };
+		B5CB12491BC1455600688AF7 /* stream.png in Resources */ = {isa = PBXBuildFile; fileRef = B5CB123F1BC1455600688AF7 /* stream.png */; };
+		B5CB124C1BC1477600688AF7 /* ContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CB124B1BC1477600688AF7 /* ContainerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +85,21 @@
 		B57DB4C31BC0BF2A00DB950A /* DeviceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceTableViewCell.m; sourceTree = "<group>"; };
 		B57DB4C51BC0FCE500DB950A /* BarDayItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarDayItemView.h; sourceTree = "<group>"; };
 		B57DB4C61BC0FCE500DB950A /* BarDayItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarDayItemView.m; sourceTree = "<group>"; };
+		B5CB12331BC1445500688AF7 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		B5CB12341BC1445500688AF7 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		B5CB12361BC1455600688AF7 /* badges-alt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "badges-alt.png"; sourceTree = "<group>"; };
+		B5CB12371BC1455600688AF7 /* badges.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = badges.png; sourceTree = "<group>"; };
+		B5CB12381BC1455600688AF7 /* community-alt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "community-alt.png"; sourceTree = "<group>"; };
+		B5CB12391BC1455600688AF7 /* community.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = community.png; sourceTree = "<group>"; };
+		B5CB123A1BC1455600688AF7 /* friends-alt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "friends-alt.png"; sourceTree = "<group>"; };
+		B5CB123B1BC1455600688AF7 /* friends.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = friends.png; sourceTree = "<group>"; };
+		B5CB123C1BC1455600688AF7 /* settings-alt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings-alt.png"; sourceTree = "<group>"; };
+		B5CB123D1BC1455600688AF7 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
+		B5CB123E1BC1455600688AF7 /* stream-alt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stream-alt.png"; sourceTree = "<group>"; };
+		B5CB123F1BC1455600688AF7 /* stream.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stream.png; sourceTree = "<group>"; };
+		B5CB124A1BC1477600688AF7 /* ContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContainerViewController.h; sourceTree = "<group>"; };
+		B5CB124B1BC1477600688AF7 /* ContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainerViewController.m; sourceTree = "<group>"; };
+		D469E0FC6C588DF6E4B92469 /* libPods-Stream.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Stream.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,12 +120,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		74C90F98623418872AB38203 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D469E0FC6C588DF6E4B92469 /* libPods-Stream.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B57DB4741BC072E500DB950A = {
 			isa = PBXGroup;
 			children = (
 				B57DB47F1BC072E500DB950A /* Stream */,
 				B57DB49C1BC072E500DB950A /* StreamTests */,
 				B57DB47E1BC072E500DB950A /* Products */,
+				74C90F98623418872AB38203 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -120,6 +156,8 @@
 				B57DB48B1BC072E500DB950A /* ViewController.m */,
 				B57DB4B61BC0795100DB950A /* NavPage.h */,
 				B57DB4B71BC0795100DB950A /* NavPage.m */,
+				B5CB12331BC1445500688AF7 /* MenuViewController.h */,
+				B5CB12341BC1445500688AF7 /* MenuViewController.m */,
 				B57DB4B51BC077FE00DB950A /* Config.h */,
 				B57DB4BF1BC0AA1F00DB950A /* DeviceInnerView.h */,
 				B57DB4C01BC0AA1F00DB950A /* DeviceInnerView.m */,
@@ -127,6 +165,8 @@
 				B57DB4C31BC0BF2A00DB950A /* DeviceTableViewCell.m */,
 				B57DB4C51BC0FCE500DB950A /* BarDayItemView.h */,
 				B57DB4C61BC0FCE500DB950A /* BarDayItemView.m */,
+				B5CB124A1BC1477600688AF7 /* ContainerViewController.h */,
+				B5CB124B1BC1477600688AF7 /* ContainerViewController.m */,
 				B57DB48D1BC072E500DB950A /* Main.storyboard */,
 				B57DB4901BC072E500DB950A /* Images.xcassets */,
 				B57DB4921BC072E500DB950A /* LaunchScreen.xib */,
@@ -139,6 +179,16 @@
 		B57DB4801BC072E500DB950A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B5CB12361BC1455600688AF7 /* badges-alt.png */,
+				B5CB12371BC1455600688AF7 /* badges.png */,
+				B5CB12381BC1455600688AF7 /* community-alt.png */,
+				B5CB12391BC1455600688AF7 /* community.png */,
+				B5CB123A1BC1455600688AF7 /* friends-alt.png */,
+				B5CB123B1BC1455600688AF7 /* friends.png */,
+				B5CB123C1BC1455600688AF7 /* settings-alt.png */,
+				B5CB123D1BC1455600688AF7 /* settings.png */,
+				B5CB123E1BC1455600688AF7 /* stream-alt.png */,
+				B5CB123F1BC1455600688AF7 /* stream.png */,
 				B57DB4BD1BC08C4800DB950A /* Linearicons-Free.ttf */,
 				B57DB4BB1BC0881900DB950A /* add-stream-button.png */,
 				B57DB4B91BC0881400DB950A /* menu.png */,
@@ -252,17 +302,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				B57DB4B11BC0757700DB950A /* GothamRnd-Bold.otf in Resources */,
+				B5CB12451BC1455600688AF7 /* friends.png in Resources */,
+				B5CB12441BC1455600688AF7 /* friends-alt.png in Resources */,
 				B57DB4B21BC0757700DB950A /* GothamRnd-Book.otf in Resources */,
 				B57DB4B31BC0757700DB950A /* GothamRnd-Light.otf in Resources */,
 				B57DB4BC1BC0881900DB950A /* add-stream-button.png in Resources */,
 				B57DB4B41BC0757700DB950A /* GothamRnd-Medium.otf in Resources */,
+				B5CB12431BC1455600688AF7 /* community.png in Resources */,
 				B57DB48F1BC072E500DB950A /* Main.storyboard in Resources */,
+				B5CB12481BC1455600688AF7 /* stream-alt.png in Resources */,
+				B5CB12401BC1455600688AF7 /* badges-alt.png in Resources */,
 				B57DB4BE1BC08C4800DB950A /* Linearicons-Free.ttf in Resources */,
 				B57DB4941BC072E500DB950A /* LaunchScreen.xib in Resources */,
+				B5CB12411BC1455600688AF7 /* badges.png in Resources */,
+				B5CB12421BC1455600688AF7 /* community-alt.png in Resources */,
 				B57DB4BA1BC0881400DB950A /* menu.png in Resources */,
 				B57DB4911BC072E500DB950A /* Images.xcassets in Resources */,
+				B5CB12491BC1455600688AF7 /* stream.png in Resources */,
+				B5CB12471BC1455600688AF7 /* settings.png in Resources */,
 				B57DB4AA1BC073D600DB950A /* menu.svg in Resources */,
 				B57DB4AC1BC0749100DB950A /* menu.pdf in Resources */,
+				B5CB12461BC1455600688AF7 /* settings-alt.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,8 +341,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B57DB4C71BC0FCE500DB950A /* BarDayItemView.m in Sources */,
+				B5CB12351BC1445500688AF7 /* MenuViewController.m in Sources */,
 				B57DB4891BC072E500DB950A /* Stream.xcdatamodeld in Sources */,
 				B57DB4861BC072E500DB950A /* AppDelegate.m in Sources */,
+				B5CB124C1BC1477600688AF7 /* ContainerViewController.m in Sources */,
 				B57DB4C41BC0BF2A00DB950A /* DeviceTableViewCell.m in Sources */,
 				B57DB48C1BC072E500DB950A /* ViewController.m in Sources */,
 				B57DB4831BC072E500DB950A /* main.m in Sources */,
@@ -484,6 +546,7 @@
 				B57DB4A51BC072E500DB950A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B57DB4A61BC072E500DB950A /* Build configuration list for PBXNativeTarget "StreamTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +555,7 @@
 				B57DB4A81BC072E500DB950A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

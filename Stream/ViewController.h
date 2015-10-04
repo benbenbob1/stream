@@ -14,25 +14,6 @@
     IBOutlet UITableView *devicesView;
     UIButton *addButton;
     NSMutableArray *devices;
-    
-    /*
-     devices: [
-        {
-            name: "Kitchen Sink",
-            points: 21233,
-            days: [
-                {
-                    name: "T",
-                    value: 295
-                },
-                {
-                    name: "W",
-                    value: 280
-                }
-            ]
-        }
-     ]
-     */
 }
 
 - (void)addButtonPressed:(UIButton *)sender;

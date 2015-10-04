@@ -32,7 +32,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 40.0f;
+    return 50.0f;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
@@ -90,17 +90,34 @@
                                                  @"points": @"21230",
                                                  @"days": @[
                                                          @{@"date": @"9/29/15",
-                                                           @"value": @"29"},
+                                                           @"value": @"39"},
                                                          @{@"date": @"9/30/15",
-                                                           @"value": @"28"},
+                                                           @"value": @"25"},
                                                          @{@"date": @"10/1/15",
                                                            @"value": @"36"},
                                                          @{@"date": @"10/2/15",
-                                                           @"value": @"31"},
+                                                           @"value": @"25"},
                                                          @{@"date": @"10/3/15",
                                                            @"value": @"24"},
                                                          @{@"date": @"10/4/15",
-                                                           @"value": @"24"}
+                                                           @"value": @"8"}
+                                                         ]
+                                                 },
+                                               @{@"name": @"Downstairs Toilet",
+                                                 @"points": @"923455",
+                                                 @"days": @[
+                                                         @{@"date": @"9/29/15",
+                                                           @"value": @"3"},
+                                                         @{@"date": @"9/30/15",
+                                                           @"value": @"0"},
+                                                         @{@"date": @"10/1/15",
+                                                           @"value": @"4"},
+                                                         @{@"date": @"10/2/15",
+                                                           @"value": @"8"},
+                                                         @{@"date": @"10/3/15",
+                                                           @"value": @"10"},
+                                                         @{@"date": @"10/4/15",
+                                                           @"value": @"4"}
                                                          ]
                                                  }
                                                ]];

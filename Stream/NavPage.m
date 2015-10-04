@@ -7,12 +7,13 @@
 //
 
 #import "NavPage.h"
+#import "MenuViewController.h"
 #import "Config.h"
 
 @implementation NavPage
 
 - (void)viewDidLoad {
-    //self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor whiteColor];
     CGFloat navBarHeight = 90.0f;
     navBarHeight -= STATUS_BAR_HEIGHT;
     navBarView = [[UIView alloc] initWithFrame:CGRectMake(-1, -1, self.view.frame.size.width+2.0, navBarHeight + 1.0)];
@@ -52,6 +53,7 @@
     panGesture.maximumNumberOfTouches = 1;
     [navBarView addGestureRecognizer:panGesture];*/
     
+    
     /*for (NSString *family in [UIFont familyNames]) {
         NSLog(@"%@", family);
         for (NSString *name in [UIFont fontNamesForFamilyName:family]) {
@@ -60,7 +62,7 @@
     }*/
     
     menuOpen = false;
-    menuWidth = 150.0;
+    menuWidth = [MenuViewController buttonSize];
 }
 
 - (NSString *)myTitle {
@@ -102,6 +104,9 @@
         oldFrame.origin.x = 0.0;
     } else {
         oldFrame.origin.x = menuWidth;
+        UIButton *blockingView = [[UIButton alloc] initWithFrame:self.view.frame];
+        [blockingView addTarget:self action:@selector(blockingViewPressed:) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:blockingView];
     }
     
     menuOpen = !menuOpen;
@@ -111,6 +116,12 @@
     } completion:^(BOOL finished) {
         //
     }];
+    
+}
+
+- (void)blockingViewPressed:(UIButton *)sender {
+    [self menuButtonPressed:sender];
+    [sender removeFromSuperview];
     
 }
 
